@@ -1,0 +1,12 @@
+#ENV files
+.env
+
+#python cache
+__pycache__/
+
+#virtual enviornment
+venv/
+
+#Database files
+users.db
+
