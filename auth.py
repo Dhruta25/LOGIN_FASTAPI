@@ -5,9 +5,11 @@ from jose import jwt,JWTError
 from datetime import datetime,timedelta
 from sqlalchemy.orm import Session
 import models,database
-
-SECRET_KEY = "Dhruta123"
-ALGORITHM = "HS256"
+from dotenv import load_dotenv
+import os
+load_dotenv()
+SECRET_KEY = os.getenv("SECRET_KEY")
+ALGORITHM = os.getenv("ALGORITHM")
 
 pwd_context = CryptContext(schemes=["argon2"],deprecated = "auto")
 oauth2_schemes = OAuth2PasswordBearer(tokenUrl="login")
